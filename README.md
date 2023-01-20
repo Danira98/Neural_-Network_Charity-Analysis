@@ -1,8 +1,8 @@
-# Neural Network Charity Analysis: Working with Deep Machine Learning Models
+# Neural Network Charity Analysis: ***Working with Deep Machine Learning Models***
 
 ## Overview of Project
 
-## Overview
+### Overview
 In this project, we are asked to apply our knowledge of Deep Machine Learning modules to help the company of Alphabet Soup. 
 Alphabet Soup is a philanthropic foundation whose goal is to help organizations that protect the environment, improve people's well being, and unify the world. They contribute to these organizations financially, and they are interested to see the impact of their donations as well as the use of it. This analysis will help the company determine which organizations are using the foundation's money effectively and investigate how potential recipients would benefit from their donations.
 
