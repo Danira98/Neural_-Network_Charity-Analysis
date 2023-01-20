@@ -12,3 +12,24 @@ The purpose of this project is to determine which organizations are worth invest
 
 ## Results
 
+###  Original Neural Network:
+ 
+ Our Neural Network model is broken into two components, Data Preprocessing and Compiling,Training and Evaluating the Model. We will take a look at what each step entails and how it affects our model.
+ 
+ #### Data Preprocessing:
+In this step, we look at the data that has been provided to see the variables we are going to consider to be targets, features and which ones should be removed. The following list provides the breakdown of the variables in our data and in which category they fall into:
+- Targets:
+  - APPLICATION_TYPE
+  - CLASSIFICATION
+  - SPECIAL_CONSIDERATIN
+  - STATUS
+  - ASK_AMT
+  - INCOME_AMT
+  - AFFILIATION
+  - USE_CASE
+  - 
+- Features:
+   -IS_SUCCESFUL
+- Neither Targets nor Features:
+  - EIN
+  - NAME
