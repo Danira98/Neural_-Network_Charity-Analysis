@@ -11,25 +11,84 @@ Alphabet Soup is a philanthropic foundation whose goal is to help organizations 
 The purpose of this project is to determine which organizations are worth investing on and predict which ones will be high risk. We are instructed to use Neural Network models, as well as an improved version of this model, to accurately predict our outcomes to at least 75%. We will achieve this by using the programming language of Python, specifically with the  help of the libraries of TensorFlow,Scikit-Learn and Pandas. By accurately predicting high risk organizations, we are able to help the company minimize monetary loses and suggest types of organizations that will be worth investing on.
 
 ## Results
-
-###  Original Neural Network:
  
- Our Neural Network model is broken into two components, Data Preprocessing and Compiling,Training and Evaluating the Model. We will take a look at what each step entails and how it affects our model.
+Our Neural Network model is broken into two components, Data Preprocessing and Compiling,Training and Evaluating the Model. We will take a look at what each step entails and how it affects our model.
  
- #### Data Preprocessing:
+### Data Preprocessing:
 In this step, we look at the data that has been provided to see the variables we are going to consider to be targets, features and which ones should be removed. The following list provides the breakdown of the variables in our data and in which category they fall into:
-- Targets:
+
+- Features:
   - APPLICATION_TYPE
-  - CLASSIFICATION
-  - SPECIAL_CONSIDERATIN
+  - SPECIAL_CONSIDERATION
   - STATUS
   - ASK_AMT
   - INCOME_AMT
+- Target:
+  - IS_SUCCESSFUL
+- Other Variables:
   - AFFILIATION
+  - CLASSIFICATION
   - USE_CASE
-  - 
-- Features:
-   -IS_SUCCESFUL
-- Neither Targets nor Features:
   - EIN
   - NAME
+  
+We choose our target to be the column "IS_SUCCESSFUL" since the purpose of our algorithm is to identify whether the organization has been efficiently using the money provided. We assign the target to be represented as y, in which all the values of said column are passed as an array to later be trained and tested.
+
+![data_preprocessing](https://user-images.githubusercontent.com/111034667/213823435-2d62b095-cb20-478e-a702-b7dea8316907.png)
+
+Through the process of data processing, we encode our features with the method One Hot Encoding in which we split our columns into unique values and bin unique values of lower amount into a category of "Other". Additionally, during this process we drop the variables under the Other variables category since they are not necessary for our model and it allows us to process our model faster and obtain a smaller dataset. We choose the features to be represented as X, in which all the values of the columns are passed as an array.
+
+![encoded_features](https://user-images.githubusercontent.com/111034667/213823174-730a3a55-0710-43e2-9fef-3c15cc332c49.png)
+
+![data_preprocessing](https://user-images.githubusercontent.com/111034667/213823435-2d62b095-cb20-478e-a702-b7dea8316907.png)
+
+Lastly, we take our y and X arrays, split them into training and testing datasets to use into our model. We additionally create two variables, X_train_scaled and X_test_scaled to scale our train and tested data.
+
+![training_set](https://user-images.githubusercontent.com/111034667/213823357-ed358435-be74-4f5f-84f3-70ce66c523f3.png)
+
+
+### Compiling, Training, and Evaluating the Model
+
+During this process, we pick a deep neural network model to compile, train and evaluate our data. In order to attempt to achieve our model, we begin by creating a model and testing its accuracy. If this model does not reach the desired accuracy, we move on to adjusting our model to ideally improve our model and get our accuracy closer to the desired percentage.
+
+#### Model 1
+
+Our first model contained the following characteristics:
+
+- Amount of layers and hidden nodes for each layer:
+ - First layer: this layer is assigned to have 80 nodes, and use the activation function of Relu.
+ - Second layer: this layer is assigned to have 30 nodes, and use the activation function of Relu
+ - Output layer: this layer is assigned to have one node, and uses the activation function of Sigmoid
+
+![model1_layer](https://user-images.githubusercontent.com/111034667/213825196-03382fbe-9063-4c05-b8e8-832f7d3b9b4f.png)
+
+- Amount of epochs:
+We assigned our model to train with our fit function in which the X_train and y_train variables are train with 100 epochs, and use the call back function  in which every 5 epoch, our data would be saved into an h5 file.
+ 
+![model1_epoch](https://user-images.githubusercontent.com/111034667/213825094-f075bed4-be4f-4818-871f-09196bbd885c.png)
+
+After running our code, this model obtain an accuracy of 0.6815. Since the accuracy is not above 75%, we proceeded to optimize this model in an attempt to increase the accuracy score.
+
+#### Optimization Model 1
+
+In an attempt to optimize our model, we dropped the columns 'EIN','NAME','ORGANIZATION'and 'CLASSIFICATION' of our original data at the beginning of the process of data processing before creating our bins.
+
+![data_preprocessing_att1](https://user-images.githubusercontent.com/111034667/213828254-8d39b4da-c3e5-41c3-9dee-bb56faf39d5d.png)
+
+Additionally, we changed the way we binned our APPLICATION_TYPE values. We increased  our condition to bin every type of application that contained less than 700 values to be under the category of "Other". 
+
+![app_type_bin](https://user-images.githubusercontent.com/111034667/213828273-bf143c20-46ac-4f42-bbbc-634b8f40915e.png)
+
+We kept the rest of the code from Model 1, and after running our model, we observe that the accuracy score has increase to 0.7135.
+
+![accuracy_opt_1](https://user-images.githubusercontent.com/111034667/213828379-839635fe-7cc5-462f-98f8-21ba79b1ac27.png)
+
+#### Optimization Model 1
+
+We continued to work on our model to ideally improve our accuracy. This time, we kept the processed data from Optimization Model 1 but changed the amount of layers and increase the epoch number. 
+
+Layers:
+The first, second and output layer did not changed, but we added a third layer that contains 50 nodes, and the activation function of Relu.
+
+Epoch:
+The amount of epoch in our fit_model line is now increased to 110.
