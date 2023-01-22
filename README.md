@@ -118,13 +118,15 @@ For our last attempt, we continued to build upon Model 1 but this time we added 
 ![model3_layer](https://user-images.githubusercontent.com/111034667/213903824-9023fbb2-3710-40af-bf38-581e1c4d6023.png)
 
 - Epoch:
-The apount of epoch in our fit_model like is now decreased to 80.
+
+The amount of epoch in our fit_model line is now decreased to 80.
 
 ![model3_epoch](https://user-images.githubusercontent.com/111034667/213903834-16a9851e-9847-460b-a257-39adf5c44c39.png)
 
-With our modifications, the optimized model decreased the accuracy to 0.4675.
+With our modifications, the optimized model decreased the accuracy scored to 0.4675.
 
 ![accuracy_opt_3](https://user-images.githubusercontent.com/111034667/213903854-d222456c-6184-48c1-aa56-db476d95fefd.png)
 
 ## Summary
 
+Overall, our attempts were not able to meet the accuracy score desired of 75%. As we have observed from the results section, changing the way we binned our data did improve our model but changing the epoch, amount of layers, amount of nodes, and activation codes decreased the accuracy score. This shows us that neural networks might not be the ideal model to use for this type of data, due to the fact that neural networks are known to have a problem of overfitting our data. To achieve the desired accuracy score, we can attempt to take another route in which we now use the model of Logistic Regression. Logistic Regression is known to be a classification algorithm, and by implementing this model, we will be able to categorize the types of organizations that will effectively use the donations at a faster rate. With the proper data preprocessing, specifically at the point of binning our data together, we will be able to achieve a higher accuracy score with the Logistic Regression model.
