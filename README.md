@@ -63,7 +63,7 @@ Our first model contained the following characteristics:
 ![model1_layer](https://user-images.githubusercontent.com/111034667/213825196-03382fbe-9063-4c05-b8e8-832f7d3b9b4f.png)
 
 - Epochs:
-We assigned our model to train with our fit function in which the X_train and y_train variables are trained with 100 epochs. Additionally, it uses the call back function which saves the weights of every 5 epoch into an h5 file called AlphabetSoupCharity.
+We assigned our model to train with our fit function in which the X_train and y_train variables are trained with 100 epochs. Additionally, it uses the call back function which saves the weights of every 5 epoch into an HDF5 file called AlphabetSoupCharity.
  
 ![model1_epoch](https://user-images.githubusercontent.com/111034667/213825094-f075bed4-be4f-4818-871f-09196bbd885c.png)
 
@@ -82,6 +82,8 @@ Additionally, we changed the way we binned our APPLICATION_TYPE values. We incre
 We kept the rest of the code from Model 1, and after running our model, we observed that the accuracy score had increase to 0.7135.
 
 ![accuracy_opt_1](https://user-images.githubusercontent.com/111034667/213828379-839635fe-7cc5-462f-98f8-21ba79b1ac27.png)
+
+Note: This model ended up obtaining the closest accuracy score to 75%, therefore, we saved the weights of every 5 epochs into the HDF5 file of AlphabetSoupCharity_Optimization.
 
 #### Optimization Model 2
 
