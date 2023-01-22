@@ -8,7 +8,7 @@ Alphabet Soup is a philanthropic foundation whose goal is to help organizations 
 
 ### Purpose
 
-The purpose of this project is to determine which organizations are worth investing on and predict which ones will be high risk. We are instructed to use Neural Network models, as well as an improved version of this model, to accurately predict our outcomes to at least 75%. We will achieve this by using the programming language of Python, specifically with the  help of the libraries of TensorFlow,Scikit-Learn and Pandas. By accurately predicting high risk organizations, we are able to help the company minimize monetary loses and suggest types of organizations that will be worth investing on.
+The purpose of this project is to determine which organizations are worth investing on and predict which ones will be high risk. We are instructed to use Neural Network models, as well as an improved version of this model, to obtain an accuracy of at least 75% if possible. We will achieve this by using the programming language of Python, specifically with the  help of the libraries of TensorFlow,Scikit-Learn and Pandas. By accurately predicting high risk organizations, we are able to help the company minimize monetary loses and suggest types of organizations that will be worth investing on.
 
 ## Results
  
@@ -55,15 +55,15 @@ During this process, we pick a deep neural network model to compile, train and e
 
 Our first model contained the following characteristics:
 
-- Amount of layers and hidden nodes for each layer:
- - First layer: this layer is assigned to have 80 nodes, and use the activation function of Relu.
- - Second layer: this layer is assigned to have 30 nodes, and use the activation function of Relu
- - Output layer: this layer is assigned to have one node, and uses the activation function of Sigmoid
+- Layers and hidden nodes: 
+ - First layer: contains 80 nodes, and uses the activation function of Relu.
+ - Second layer: contains 30 nodes, and uses the activation function of Relu.
+ - Output layer: contains one node, and uses the activation function of Sigmoid.
 
 ![model1_layer](https://user-images.githubusercontent.com/111034667/213825196-03382fbe-9063-4c05-b8e8-832f7d3b9b4f.png)
 
-- Amount of epochs:
-We assigned our model to train with our fit function in which the X_train and y_train variables are train with 100 epochs, and use the call back function  in which every 5 epoch, our data would be saved into an h5 file.
+- Epochs:
+We assigned our model to train with our fit function in which the X_train and y_train variables are train with 100 epochs. Additionally, it uses the call back function which saves the weight  of every 5 epoch into an h5 file.
  
 ![model1_epoch](https://user-images.githubusercontent.com/111034667/213825094-f075bed4-be4f-4818-871f-09196bbd885c.png)
 
@@ -83,12 +83,48 @@ We kept the rest of the code from Model 1, and after running our model, we obser
 
 ![accuracy_opt_1](https://user-images.githubusercontent.com/111034667/213828379-839635fe-7cc5-462f-98f8-21ba79b1ac27.png)
 
-#### Optimization Model 1
+#### Optimization Model 2
 
 We continued to work on our model to ideally improve our accuracy. This time, we kept the processed data from Optimization Model 1 but changed the amount of layers and increase the epoch number. 
 
-Layers:
-The first, second and output layer did not changed, but we added a third layer that contains 50 nodes, and the activation function of Relu.
+- Layers:
+ - First : contains 80 nodes, and uses the activation function of Relu.
+ - Second : contains 30 nodes, and uses the activation function of Relu.
+ - Third: contains 50 nodes, and uses the activation function of Relu.
+ - Output: contains one nodes, and uses the activation functino of sigmoid.
 
-Epoch:
+![model2_layer](https://user-images.githubusercontent.com/111034667/213903198-59fcfb6e-a223-4aaa-8b05-39b793318836.png)
+
+- Epoch:
 The amount of epoch in our fit_model line is now increased to 110.
+
+![model2_epoch](https://user-images.githubusercontent.com/111034667/213903216-3a29f8fd-cf62-4bf7-ae0e-8c9c4bc6759b.png)
+
+After running our code for this version of optimized model,  we observe the accuracy score to decrease to 0.5449
+
+![accuracy_opt_2](https://user-images.githubusercontent.com/111034667/213903250-dc12f503-1b91-40df-8cb0-3d55124f308b.png)
+
+#### Optimization Model 3
+
+For our last attempt, we continued to build upon Model 1 but this time we added two layes with different activation functions, increase the amount of neurons and change the epoch number.
+
+- Layers:
+ - First : contains 100 nodes, and uses the activation function of Relu.
+ - Second : contains 80 nodes, and uses the activation function of Relu.
+ - Third: contains 50 nodes, and uses the activation function of Relu.
+ - Fourth: contains 30 nodes, and uses the activation function of sigmoid.
+ - Output: contains one nodes, and uses the activation functino of sigmoid.
+ - 
+![model3_layer](https://user-images.githubusercontent.com/111034667/213903824-9023fbb2-3710-40af-bf38-581e1c4d6023.png)
+
+- Epoch:
+The apount of epoch in our fit_model like is now decreased to 80.
+
+![model3_epoch](https://user-images.githubusercontent.com/111034667/213903834-16a9851e-9847-460b-a257-39adf5c44c39.png)
+
+With our modifications, the optimized model decreased the accuracy to 0.4675.
+
+![accuracy_opt_3](https://user-images.githubusercontent.com/111034667/213903854-d222456c-6184-48c1-aa56-db476d95fefd.png)
+
+## Summary
+
