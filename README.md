@@ -56,9 +56,9 @@ During this process, we pick a deep neural network model to compile, train and e
 Our first model contained the following characteristics:
 
 - Layers and hidden nodes: 
- - First layer: contains 80 nodes, and uses the activation function of Relu.
- - Second layer: contains 30 nodes, and uses the activation function of Relu.
- - Output layer: contains one node, and uses the activation function of Sigmoid.
+  - First layer: contains 80 nodes, and uses the activation function of Relu.
+  - Second layer: contains 30 nodes, and uses the activation function of Relu.
+  - Output layer: contains one node, and uses the activation function of Sigmoid.
 
 ![model1_layer](https://user-images.githubusercontent.com/111034667/213825196-03382fbe-9063-4c05-b8e8-832f7d3b9b4f.png)
 
@@ -88,10 +88,10 @@ We kept the rest of the code from Model 1, and after running our model, we obser
 We continued to work on our model to ideally improve our accuracy. This time, we kept the processed data from Optimization Model 1 but changed the amount of layers and increase the epoch number. 
 
 - Layers:
- - First : contains 80 nodes, and uses the activation function of Relu.
- - Second : contains 30 nodes, and uses the activation function of Relu.
- - Third: contains 50 nodes, and uses the activation function of Relu.
- - Output: contains one nodes, and uses the activation functino of sigmoid.
+  - First : contains 80 nodes, and uses the activation function of Relu.
+  - Second : contains 30 nodes, and uses the activation function of Relu.
+  - Third: contains 50 nodes, and uses the activation function of Relu.
+  - Output: contains one nodes, and uses the activation functino of sigmoid.
 
 ![model2_layer](https://user-images.githubusercontent.com/111034667/213903198-59fcfb6e-a223-4aaa-8b05-39b793318836.png)
 
@@ -109,12 +109,12 @@ After running our code for this version of optimized model,  we observe the accu
 For our last attempt, we continued to build upon Model 1 but this time we added two layes with different activation functions, increase the amount of neurons and change the epoch number.
 
 - Layers:
- - First : contains 100 nodes, and uses the activation function of Relu.
- - Second : contains 80 nodes, and uses the activation function of Relu.
- - Third: contains 50 nodes, and uses the activation function of Relu.
- - Fourth: contains 30 nodes, and uses the activation function of sigmoid.
- - Output: contains one nodes, and uses the activation functino of sigmoid.
- - 
+  - First : contains 100 nodes, and uses the activation function of Relu.
+  - Second : contains 80 nodes, and uses the activation function of Relu.
+  - Third: contains 50 nodes, and uses the activation function of Relu.
+  - Fourth: contains 30 nodes, and uses the activation function of sigmoid.
+  - Output: contains one nodes, and uses the activation functino of sigmoid.
+ 
 ![model3_layer](https://user-images.githubusercontent.com/111034667/213903824-9023fbb2-3710-40af-bf38-581e1c4d6023.png)
 
 - Epoch:
