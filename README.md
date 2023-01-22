@@ -63,6 +63,7 @@ Our first model contained the following characteristics:
 ![model1_layer](https://user-images.githubusercontent.com/111034667/213825196-03382fbe-9063-4c05-b8e8-832f7d3b9b4f.png)
 
 - Epochs:
+
 We assigned our model to train with our fit function in which the X_train and y_train variables are trained with 100 epochs. Additionally, it uses the call back function which saves the weights of every 5 epoch into an HDF5 file called AlphabetSoupCharity.
  
 ![model1_epoch](https://user-images.githubusercontent.com/111034667/213825094-f075bed4-be4f-4818-871f-09196bbd885c.png)
@@ -98,6 +99,7 @@ We continued to work on our model to ideally improve our accuracy. This time, we
 ![model2_layer](https://user-images.githubusercontent.com/111034667/213903198-59fcfb6e-a223-4aaa-8b05-39b793318836.png)
 
 - Epoch:
+
 The amount of epoch in our fit_model line is now increased to 110.
 
 ![model2_epoch](https://user-images.githubusercontent.com/111034667/213903216-3a29f8fd-cf62-4bf7-ae0e-8c9c4bc6759b.png)
